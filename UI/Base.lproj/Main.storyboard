@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder-user.png" translatesAutoresizingMaskIntoConstraints="NO" id="T7Z-PW-pgJ">
+                                <rect key="frame" x="16" y="36" width="288" height="288"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T7Z-PW-pgJ" secondAttribute="height" multiplier="1:1" id="b0E-kn-5iT"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffO-og-c29">
+                                <rect key="frame" x="16" y="346" width="288" height="29.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Alex Zverev">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="25"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3FZ-LH-4kP">
+                                <rect key="frame" x="16" y="385.5" width="288" height="97.5"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Love iOS Development, like butterflies and live in Tinkoff Bank ">
+                                        <attributes>
+                                            <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1xZ-AJ-iet">
+                                <rect key="frame" x="16" y="493" width="288" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ZQm-0x-cxI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Редактировать">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFT-L7-KNE">
+                                <rect key="frame" x="245" y="265" width="59" height="59"/>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cFT-L7-KNE" secondAttribute="height" multiplier="1:1" id="9wq-Qr-sE9"/>
+                                </constraints>
+                                <state key="normal" title="loadPhotoButton" image="slr-camera-2-xxl.png"/>
+                                <connections>
+                                    <action selector="loadPhotoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dI5-fg-VrU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ffO-og-c29" firstAttribute="top" secondItem="T7Z-PW-pgJ" secondAttribute="bottom" constant="22" id="7gu-td-tcP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T7Z-PW-pgJ" secondAttribute="trailing" constant="16" id="EHj-ar-EHt"/>
+                            <constraint firstItem="1xZ-AJ-iet" firstAttribute="top" secondItem="3FZ-LH-4kP" secondAttribute="bottom" constant="10" id="QsS-iq-oaG"/>
+                            <constraint firstItem="ffO-og-c29" firstAttribute="top" secondItem="cFT-L7-KNE" secondAttribute="bottom" constant="22" id="SP6-jP-PKl"/>
+                            <constraint firstItem="3FZ-LH-4kP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="XPv-Rg-4V7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="1xZ-AJ-iet" secondAttribute="bottom" constant="20" id="ZCl-Ht-psd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ffO-og-c29" secondAttribute="trailing" constant="16" id="kER-Hb-eFl"/>
+                            <constraint firstItem="1xZ-AJ-iet" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kTB-09-k0b"/>
+                            <constraint firstItem="3FZ-LH-4kP" firstAttribute="top" secondItem="ffO-og-c29" secondAttribute="bottom" constant="10" id="mit-Kd-Vtp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3FZ-LH-4kP" secondAttribute="trailing" constant="16" id="nFP-dW-DKf"/>
+                            <constraint firstItem="T7Z-PW-pgJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="opq-K3-XMF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cFT-L7-KNE" secondAttribute="trailing" constant="16" id="pij-GX-YxF"/>
+                            <constraint firstItem="T7Z-PW-pgJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="q0z-Ma-tZo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1xZ-AJ-iet" secondAttribute="trailing" constant="16" id="uoa-a1-gsk"/>
+                            <constraint firstItem="ffO-og-c29" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="y3H-d9-OLE"/>
+                            <constraint firstItem="cFT-L7-KNE" firstAttribute="width" secondItem="T7Z-PW-pgJ" secondAttribute="height" multiplier="70:343" id="zvl-OS-oZh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="editButton" destination="1xZ-AJ-iet" id="gTx-nx-0Xc"/>
+                        <outlet property="loadPhoto" destination="cFT-L7-KNE" id="gk0-pk-y8g"/>
+                        <outlet property="nameLabel" destination="ffO-og-c29" id="yzj-rm-Lsv"/>
+                        <outlet property="profileImage" destination="T7Z-PW-pgJ" id="cok-Dr-tCV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholder-user.png" width="600" height="600"/>
+        <image name="slr-camera-2-xxl.png" width="256" height="256"/>
+    </resources>
+</document>
