@@ -14,6 +14,12 @@
 		8DD4793E215EAA790005B856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD47930215EA7D80005B856 /* Main.storyboard */; };
 		8DD47969215EC9F30005B856 /* slr-camera-2-xxl.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DD47965215EC9F30005B856 /* slr-camera-2-xxl.png */; };
 		8DD4796A215EC9F30005B856 /* placeholder-user.png in Resources */ = {isa = PBXBuildFile; fileRef = 8DD47967215EC9F30005B856 /* placeholder-user.png */; };
+		8DD4798D216906E20005B856 /* ConversationsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4798C216906E20005B856 /* ConversationsListViewController.swift */; };
+		8DD4799121691B210005B856 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4799021691B210005B856 /* ConversationCell.swift */; };
+		8DD47998216A34C10005B856 /* Conversations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD47997216A34C10005B856 /* Conversations.swift */; };
+		8DD4799A216A641F0005B856 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD47999216A641F0005B856 /* ConversationViewController.swift */; };
+		8DD4799C216A65CE0005B856 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4799B216A65CD0005B856 /* MessageTableViewCell.swift */; };
+		8DD4799E216A79F00005B856 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4799D216A79F00005B856 /* Message.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		8DD47938215EA7D90005B856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DD47966215EC9F30005B856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/slr-camera-2-xxl.png"; sourceTree = "<group>"; };
 		8DD47968215EC9F30005B856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Base; path = "Base.lproj/placeholder-user.png"; sourceTree = "<group>"; };
+		8DD4798C216906E20005B856 /* ConversationsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsListViewController.swift; sourceTree = "<group>"; };
+		8DD4799021691B210005B856 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		8DD47997216A34C10005B856 /* Conversations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversations.swift; sourceTree = "<group>"; };
+		8DD47999216A641F0005B856 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
+		8DD4799B216A65CD0005B856 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		8DD4799D216A79F00005B856 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +70,30 @@
 		8DD4792B215EA7D80005B856 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8DD47996216A349D0005B856 /* Models */,
 				8DD4792C215EA7D80005B856 /* AppDelegate.swift */,
 				8DD4792E215EA7D80005B856 /* ViewController.swift */,
+				8DD4798C216906E20005B856 /* ConversationsListViewController.swift */,
 				8DD47930215EA7D80005B856 /* Main.storyboard */,
 				8DD47965215EC9F30005B856 /* slr-camera-2-xxl.png */,
 				8DD47967215EC9F30005B856 /* placeholder-user.png */,
 				8DD47933215EA7D90005B856 /* Assets.xcassets */,
 				8DD47935215EA7D90005B856 /* LaunchScreen.storyboard */,
 				8DD47938215EA7D90005B856 /* Info.plist */,
+				8DD4799021691B210005B856 /* ConversationCell.swift */,
+				8DD47999216A641F0005B856 /* ConversationViewController.swift */,
+				8DD4799B216A65CD0005B856 /* MessageTableViewCell.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		8DD47996216A349D0005B856 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DD47997216A34C10005B856 /* Conversations.swift */,
+				8DD4799D216A79F00005B856 /* Message.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +169,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DD4799C216A65CE0005B856 /* MessageTableViewCell.swift in Sources */,
 				8DD4792F215EA7D80005B856 /* ViewController.swift in Sources */,
+				8DD4799121691B210005B856 /* ConversationCell.swift in Sources */,
+				8DD4799A216A641F0005B856 /* ConversationViewController.swift in Sources */,
+				8DD4798D216906E20005B856 /* ConversationsListViewController.swift in Sources */,
+				8DD4799E216A79F00005B856 /* Message.swift in Sources */,
 				8DD4792D215EA7D80005B856 /* AppDelegate.swift in Sources */,
+				8DD47998216A34C10005B856 /* Conversations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
