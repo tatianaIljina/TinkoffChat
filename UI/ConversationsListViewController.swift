@@ -7,13 +7,31 @@
 //
 
 import UIKit
-class ConversationsListViewController: UIViewController {
+class ConversationsListViewController: UIViewController, ThemesViewControllerDelegate {
+    func themesViewController(_ controller: ThemesViewController, didSelectTheme selectedTheme: UIColor) {
+        self.view.backgroundColor = selectedTheme
+        //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //appDelegate.configureNavigationBar()
+        logThemeChanging(selectedTheme: selectedTheme)
+    }
+    func logThemeChanging(selectedTheme: UIColor){
+        print ("New theme was choosed: \(selectedTheme)")
+    }
+    
     
     @IBOutlet weak var tableConversations: UITableView!
-    
+
     var onlineConversations = [Conversation]()
     var offlineConversations = [Conversation]()
     var allConversations = [[Conversation]]()
+    
+    @IBAction func onProfile(_ sender: Any) {
+        performSegue(withIdentifier: "ShowThemes", sender: self)
+    }
+    
+    @IBAction func onChoosingThemes(_ sender: Any) {
+        performSegue(withIdentifier: "ShowThemes", sender: self)
+   }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,21 +40,21 @@ class ConversationsListViewController: UIViewController {
         self.tableConversations.dataSource = self
         self.tableConversations.rowHeight = UITableView.automaticDimension
         //self.tableConversations.estimatedRowHeight = 100
+        //performSegue(withIdentifier: "ShowProfile", sender: self)
     }
-
-
+    
     
     func makeData(){
         self.onlineConversations.append(Conversation(name: "Мама", message: "Домой!", date: getDate(), online: true, hasUnreadMessage: false))
         self.onlineConversations.append(Conversation(name: "Сестра", message: nil, date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Любимый", message: "Пришла зп", date: nil, online: true, hasUnreadMessage: false))
+        self.onlineConversations.append(Conversation(name: "Любимый", message: "Как дела?", date: nil, online: true, hasUnreadMessage: false))
         self.onlineConversations.append(Conversation(name: "Босс", message: "Где отчет?", date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Шиян", message: "Hi", date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Навельный", message: "Придешь на митинг?", date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Макгрегор", message: "Хабиб лох", date: getDate(), online: true, hasUnreadMessage: false))
+        self.onlineConversations.append(Conversation(name: "Друг", message: "Hi", date: getDate(), online: true, hasUnreadMessage: false))
+        self.onlineConversations.append(Conversation(name: "Олег", message: nil, date: getDate(), online: true, hasUnreadMessage: false))
+        self.onlineConversations.append(Conversation(name: "Декан", message: "вы отчислены", date: getDate(), online: true, hasUnreadMessage: false))
         self.onlineConversations.append(Conversation(name: "ХЗ кто", message: "Го гулять", date: getDate(), online: true, hasUnreadMessage: false))
         self.onlineConversations.append(Conversation(name: "Гоша", message: nil, date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Серега", message: "Денег дашь? А то я тут такое пальто в магазине видел", date: getDate(), online: true, hasUnreadMessage: false))
+        self.onlineConversations.append(Conversation(name: "Серега", message: "Я тут такое пальто в магазине видел", date: getDate(), online: true, hasUnreadMessage: false))
         
         self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
         self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
@@ -112,4 +130,27 @@ extension ConversationsListViewController: UITableViewDataSource, UITableViewDel
         conversationViewController.title = allConversations[indexPath.section][indexPath.row].name
         navigationController?.pushViewController(conversationViewController, animated: true)
     }
+    
+    
+    
+    
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+//        if segue.identifier == "ShowProfile"{
+//            let segue = segue.destination as! ViewController
+//        }
+//            else {
+//                super.prepare(for: segue, sender: sender)
+//            }
+//
+//    }
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let themesViewController = (segue.destination as! UINavigationController).viewControllers.first as? ThemesViewController {
+//            themesViewController.delegate = self
+//        } else {
+//        }
+//    }
+    
 }
+
