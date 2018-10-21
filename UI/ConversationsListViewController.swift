@@ -26,12 +26,20 @@ class ConversationsListViewController: UIViewController, ThemesViewControllerDel
     var allConversations = [[Conversation]]()
     
     @IBAction func onProfile(_ sender: Any) {
-        performSegue(withIdentifier: "ShowThemes", sender: self)
+        performSegue(withIdentifier: "onProfile", sender: self)
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let profileController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//        self.present(profileController, animated: true, completion: nil)
     }
     
     @IBAction func onChoosingThemes(_ sender: Any) {
-        performSegue(withIdentifier: "ShowThemes", sender: self)
+        //performSegue(withIdentifier: "ShowThemes", sender: self)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let themeViewController = storyboard.instantiateViewController(withIdentifier: "ThemeViewController") as! ThemesViewController
+        self.present(themeViewController, animated: true, completion: nil)
    }
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -144,7 +152,7 @@ extension ConversationsListViewController: UITableViewDataSource, UITableViewDel
 //            }
 //
 //    }
-    
+//
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if let themesViewController = (segue.destination as! UINavigationController).viewControllers.first as? ThemesViewController {
 //            themesViewController.delegate = self
