@@ -9,6 +9,8 @@
 import UIKit
 
 class OperationDataManager: DataManager {
+
+    
     
     var profile: [String : String]?
     
@@ -22,11 +24,16 @@ class OperationDataManager: DataManager {
 
     
     
-    func saveProfile(name: String, info: String) {
+    func saveProfile(name: String, info: String, hasError: @escaping (Bool) -> ()) {
         profile = ["name": name, "info": info]
         let saveOperation = SaveOperation()
         saveOperation.queuePriority = .normal
         saveOperation.profile = self.profile
+        saveOperation.completionBlock = {
+            OperationQueue.main.addOperation {
+                hasError(saveOperation.hasError)
+            }
+        }
         OperationQueue().addOperation(saveOperation)
     }
     
@@ -36,6 +43,7 @@ class SaveOperation: Operation {
     
     let dataFile = "profile.txt"
     var profile: [String : String]?
+    var hasError: Bool = true
     
     override func main() {
         if let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
@@ -44,6 +52,7 @@ class SaveOperation: Operation {
                 if let profile = profile {
                     let saveDataFile = try JSONSerialization.data(withJSONObject: profile, options: .init(rawValue: 0))
                     try saveDataFile.write(to: fileURL)
+                    hasError = false
                 }
             } catch {
                 print (error)

@@ -26,9 +26,9 @@ class ConversationsListViewController: UIViewController, ThemesViewControllerDel
     var allConversations = [[Conversation]]()
     
     @IBAction func onProfile(_ sender: Any) {
-        performSegue(withIdentifier: "onProfile", sender: self)
+        performSegue(withIdentifier: "ShowProfile", sender: self)
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let profileController = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+//        let profileController = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
 //        self.present(profileController, animated: true, completion: nil)
     }
     

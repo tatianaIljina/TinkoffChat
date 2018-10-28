@@ -10,11 +10,14 @@
 		8D4234932173453B00C67E3D /* Themes.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4234922173453B00C67E3D /* Themes.m */; };
 		8D4234962173480B00C67E3D /* ThemesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D4234952173480B00C67E3D /* ThemesViewController.m */; };
 		8D42349C21734AE000C67E3D /* ThemesViewControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D42349B21734AE000C67E3D /* ThemesViewControllerDelegate.m */; };
-		8D5F6B9A217AF9B200CB3E23 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6B99217AF9B100CB3E23 /* ProfileViewController.swift */; };
+		8D51A2A72184BB9B001C57B1 /* MultipeerCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51A2A62184BB9B001C57B1 /* MultipeerCommunicator.swift */; };
+		8D51A2A92184BC51001C57B1 /* Communicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51A2A82184BC51001C57B1 /* Communicator.swift */; };
+		8D51A2AB2184BDAF001C57B1 /* CommunicatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51A2AA2184BDAF001C57B1 /* CommunicatorDelegate.swift */; };
+		8D51A2AD21864DD0001C57B1 /* CommunicationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51A2AC21864DD0001C57B1 /* CommunicationManager.swift */; };
 		8D5F6B9C217CA93500CB3E23 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6B9B217CA93500CB3E23 /* DataManager.swift */; };
 		8D5F6BA0217CE97D00CB3E23 /* OperationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5F6B9F217CE97D00CB3E23 /* OperationDataManager.swift */; };
 		8DD4792D215EA7D80005B856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4792C215EA7D80005B856 /* AppDelegate.swift */; };
-		8DD4792F215EA7D80005B856 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4792E215EA7D80005B856 /* ViewController.swift */; };
+		8DD4792F215EA7D80005B856 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD4792E215EA7D80005B856 /* ProfileViewController.swift */; };
 		8DD47934215EA7D90005B856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DD47933215EA7D90005B856 /* Assets.xcassets */; };
 		8DD47937215EA7D90005B856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD47935215EA7D90005B856 /* LaunchScreen.storyboard */; };
 		8DD4793E215EAA790005B856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DD47930215EA7D80005B856 /* Main.storyboard */; };
@@ -35,13 +38,16 @@
 		8D4234952173480B00C67E3D /* ThemesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewController.m; sourceTree = "<group>"; };
 		8D42349A21734AE000C67E3D /* ThemesViewControllerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemesViewControllerDelegate.h; sourceTree = "<group>"; };
 		8D42349B21734AE000C67E3D /* ThemesViewControllerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThemesViewControllerDelegate.m; sourceTree = "<group>"; };
-		8D5F6B99217AF9B100CB3E23 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8D51A2A62184BB9B001C57B1 /* MultipeerCommunicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipeerCommunicator.swift; sourceTree = "<group>"; };
+		8D51A2A82184BC51001C57B1 /* Communicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Communicator.swift; sourceTree = "<group>"; };
+		8D51A2AA2184BDAF001C57B1 /* CommunicatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicatorDelegate.swift; sourceTree = "<group>"; };
+		8D51A2AC21864DD0001C57B1 /* CommunicationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunicationManager.swift; sourceTree = "<group>"; };
 		8D5F6B9B217CA93500CB3E23 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8D5F6B9F217CE97D00CB3E23 /* OperationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDataManager.swift; sourceTree = "<group>"; };
 		8D793B2921722E210034A0D4 /* UI-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UI-Bridging-Header.h"; sourceTree = "<group>"; };
 		8DD47929215EA7D80005B856 /* UI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DD4792C215EA7D80005B856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8DD4792E215EA7D80005B856 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8DD4792E215EA7D80005B856 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		8DD47931215EA7D80005B856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DD47933215EA7D90005B856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DD47936215EA7D90005B856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -103,7 +109,7 @@
 				8D793B2821722DAD0034A0D4 /* Themes */,
 				8DD47996216A349D0005B856 /* Models */,
 				8DD4792C215EA7D80005B856 /* AppDelegate.swift */,
-				8DD4792E215EA7D80005B856 /* ViewController.swift */,
+				8DD4792E215EA7D80005B856 /* ProfileViewController.swift */,
 				8DD4798C216906E20005B856 /* ConversationsListViewController.swift */,
 				8DD47999216A641F0005B856 /* ConversationViewController.swift */,
 				8DD47930215EA7D80005B856 /* Main.storyboard */,
@@ -114,9 +120,12 @@
 				8DD47938215EA7D90005B856 /* Info.plist */,
 				8DD4799021691B210005B856 /* ConversationCell.swift */,
 				8DD4799B216A65CD0005B856 /* MessageTableViewCell.swift */,
-				8D5F6B99217AF9B100CB3E23 /* ProfileViewController.swift */,
 				8D5F6B9B217CA93500CB3E23 /* DataManager.swift */,
 				8D5F6B9F217CE97D00CB3E23 /* OperationDataManager.swift */,
+				8D51A2A62184BB9B001C57B1 /* MultipeerCommunicator.swift */,
+				8D51A2A82184BC51001C57B1 /* Communicator.swift */,
+				8D51A2AA2184BDAF001C57B1 /* CommunicatorDelegate.swift */,
+				8D51A2AC21864DD0001C57B1 /* CommunicationManager.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -205,16 +214,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DD4799C216A65CE0005B856 /* MessageTableViewCell.swift in Sources */,
-				8DD4792F215EA7D80005B856 /* ViewController.swift in Sources */,
+				8D51A2AB2184BDAF001C57B1 /* CommunicatorDelegate.swift in Sources */,
+				8DD4792F215EA7D80005B856 /* ProfileViewController.swift in Sources */,
 				8D42349C21734AE000C67E3D /* ThemesViewControllerDelegate.m in Sources */,
 				8DD4799121691B210005B856 /* ConversationCell.swift in Sources */,
 				8DD4799A216A641F0005B856 /* ConversationViewController.swift in Sources */,
 				8D5F6B9C217CA93500CB3E23 /* DataManager.swift in Sources */,
 				8DD4798D216906E20005B856 /* ConversationsListViewController.swift in Sources */,
-				8D5F6B9A217AF9B200CB3E23 /* ProfileViewController.swift in Sources */,
 				8DD4799E216A79F00005B856 /* Message.swift in Sources */,
+				8D51A2AD21864DD0001C57B1 /* CommunicationManager.swift in Sources */,
 				8D4234932173453B00C67E3D /* Themes.m in Sources */,
 				8D5F6BA0217CE97D00CB3E23 /* OperationDataManager.swift in Sources */,
+				8D51A2A92184BC51001C57B1 /* Communicator.swift in Sources */,
+				8D51A2A72184BB9B001C57B1 /* MultipeerCommunicator.swift in Sources */,
 				8DD4792D215EA7D80005B856 /* AppDelegate.swift in Sources */,
 				8DD47998216A34C10005B856 /* Conversations.swift in Sources */,
 				8D4234962173480B00C67E3D /* ThemesViewController.m in Sources */,

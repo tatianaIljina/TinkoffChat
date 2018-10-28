@@ -7,7 +7,7 @@
 //
 
 import Foundation
-struct Message{
+struct Message {
     var text: String?
     var isComing: Bool
 }
