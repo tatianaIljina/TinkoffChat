@@ -23,7 +23,7 @@ class CommunicationManager: NSObject, CommunicatorDelegate {
     
     
     func didFoundUser(userId: String, userName: String?) {
-        let dialog = Conversation(name: userId, message: "", date: Date(), online: true, hasUnreadMessage: false)
+        let dialog = Conversation(userId: userId, name: userId, message: "", date: Date(), online: true, hasUnreadMessage: false)
         dialogs.append(dialog)
     }
     

@@ -53,27 +53,13 @@ class ConversationsListViewController: UIViewController, ThemesViewControllerDel
     
     
     func makeData(){
-        self.onlineConversations.append(Conversation(name: "Мама", message: "Домой!", date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Сестра", message: nil, date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Любимый", message: "Как дела?", date: nil, online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Босс", message: "Где отчет?", date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Друг", message: "Hi", date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Олег", message: nil, date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Декан", message: "вы отчислены", date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "ХЗ кто", message: "Го гулять", date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Гоша", message: nil, date: getDate(), online: true, hasUnreadMessage: false))
-        self.onlineConversations.append(Conversation(name: "Серега", message: "Я тут такое пальто в магазине видел", date: getDate(), online: true, hasUnreadMessage: false))
+        self.onlineConversations.append(Conversation(userId: "1", name: "Мама", message: "Домой!", date: getDate(), online: true, hasUnreadMessage: false))
+        self.onlineConversations.append(Conversation(userId: "2", name: "Сестра", message: nil, date: getDate(), online: true, hasUnreadMessage: false))
         
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
-        self.offlineConversations.append(Conversation(name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
+        
+        self.offlineConversations.append(Conversation(userId: "3", name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
+        self.offlineConversations.append(Conversation(userId: "4", name: "Олег", message: "Hi", date: getDate(), online: false, hasUnreadMessage: false))
+        
         
         self.allConversations.append(onlineConversations)
         self.allConversations.append(offlineConversations)

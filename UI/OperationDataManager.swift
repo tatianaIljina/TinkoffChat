@@ -24,8 +24,8 @@ class OperationDataManager: DataManager {
 
     
     
-    func saveProfile(name: String, info: String, hasError: @escaping (Bool) -> ()) {
-        profile = ["name": name, "info": info]
+    func saveProfile(name: String, info: String, photo: String, hasError: @escaping (Bool) -> ()) {
+        profile = ["name": name, "info": info, "photo": photo]
         let saveOperation = SaveOperation()
         saveOperation.queuePriority = .normal
         saveOperation.profile = self.profile

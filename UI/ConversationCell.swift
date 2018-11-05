@@ -9,9 +9,10 @@
 import UIKit
 
 class ConversationCell: UITableViewCell, ConversationCellConfiguration {
+    
+    var userId: String?
     var name: String?
     var message: String?
-    var date: Date?
     var online: Bool = true
     var hasUnreadMessage: Bool = true
     
@@ -29,8 +30,35 @@ class ConversationCell: UITableViewCell, ConversationCellConfiguration {
 
         // Configure the view for the selected state
     }
+    
+    var date: Date? {
+        didSet {
+            if message?.count != 0 {
+                if let date = date {
+                    
+                    let curentDate = Date()
+                    
+                    let dateFormatter = DateFormatter()
+                    let calendar = Calendar.current
+                    if calendar.startOfDay(for: curentDate) == calendar.startOfDay(for: date) {
+                        dateFormatter.dateFormat = "HH:mm"
+                    } else {
+                        dateFormatter.dateFormat = "dd MMM"
+                    }
+                    
+                    self.dateLabel.text = dateFormatter.string(from: date)
+                    
+                }
+            } else {
+                self.dateLabel.text = ""
+            }
+        }
+    }
+    
+    
     func conversationConfiguration(configuration: ConversationCellConfiguration){
         nameLabel.text = configuration.name
+        self.date = configuration.date
         if configuration.message == nil{
             //let fontSize = self.messageLabel.font.pointSize
             //self.messageLabel.font = UIFont(name: "Roboto", size: fontSize)
@@ -49,6 +77,8 @@ class ConversationCell: UITableViewCell, ConversationCellConfiguration {
 }
 
 protocol ConversationCellConfiguration: class {
+    
+    var userId: String? {get set}
     var name: String? {get set}
     var message: String? {get set}
     var date: Date? {get set}

@@ -17,21 +17,27 @@ class ProfileViewController: UIViewController {
     @IBOutlet var inputNameField: UITextField!
     @IBOutlet var editProfile: UIButton!
     @IBOutlet var saveOperation: UIButton!
-    @IBOutlet var saveGCD: UIButton!
     @IBOutlet var inputInfo: UITextField!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
-    
+    var dataManager: DataManager? = StoreDataManager()
     
     
     let imagePicker = UIImagePickerController()
     var isProfileImageEdited = false
     
-
-    @IBAction func goBack(_ sender: UIBarButtonItem) {
-        self.dismiss(animated: true, completion: nil)
+    private func convertImageToBase64() -> String {
+        
+        let image = profileImage.image
+        let imageData = image!.pngData()
+        let str = imageData?.base64EncodedString(options: .lineLength64Characters)
+        
+        return str!
     }
     
+    @IBAction func goBack1(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     
     @IBAction func editProfile(_ sender: UIButton) {
@@ -42,14 +48,9 @@ class ProfileViewController: UIViewController {
         loadPhoto.isHidden = false
         
         //покажем кнопки сохранения изменений
-        saveGCD.isHidden = false
-        saveGCD.isEnabled = true
-        
         saveOperation.isHidden = false
         saveOperation.isEnabled = true
         
-
-        saveGCD.clipsToBounds =  true
         saveOperation.clipsToBounds =  true
         
         //скроем кнопку редактировать профиль
@@ -67,23 +68,19 @@ class ProfileViewController: UIViewController {
     @IBAction func saveChangesButton(_ sender: UIButton) {
         if isProfileImageEdited == true || inputNameField.isEditing == true || inputInfo.isEditing == true {
             print("Изменения были сделаны")
+            self.activityIndicator.isHidden = false
+            self.activityIndicator.startAnimating()
+            self.saveOperation.isEnabled = false
+            self.loadPhoto.isEnabled = false
 
             //print(inputNameField.text!)
-            let DataManager: DataManager = OperationDataManager()
-            DataManager.saveProfile(name: self.inputNameField.text!, info: self.inputInfo.text!,
-                                              hasError: { (hasError : Bool ) in
-                                                if hasError {
+            self.dataManager?.saveProfile(name: self.inputNameField.text!, info: self.inputInfo.text!, photo: self.convertImageToBase64(), hasError: { (hasError : Bool ) in
+                                                if hasError==true {
                                                     self.profileNotSaved()
                                                 } else {
                                                     self.profileWasSaved()
                                                 }
-            self.activityIndicator.isHidden = false
-            self.activityIndicator.startAnimating()
-            self.saveGCD.isEnabled = false
-            self.saveOperation.isEnabled = false
-            self.loadPhoto.isEnabled = false
-
-        })
+            })
         }
         else {
             print ("not changed")
@@ -99,7 +96,6 @@ class ProfileViewController: UIViewController {
     
     
     func profileNotSaved(){
-        saveGCD.isEnabled = true
         saveOperation.isEnabled = true
         
         let warning = UIAlertController(title: "Ошибка при сохранении данных", message: nil, preferredStyle: UIAlertController.Style.alert)
@@ -117,8 +113,6 @@ class ProfileViewController: UIViewController {
         activityIndicator.stopAnimating()
 
         //убрать кнопки сохранить
-        saveGCD.isHidden = true
-        saveGCD.isEnabled = false
         
         saveOperation.isHidden = true
         saveOperation.isEnabled = false
@@ -234,9 +228,6 @@ class ProfileViewController: UIViewController {
         dismissKeyboard()
         
         //скрываем кнопки сохранить изменения
-        saveGCD.isHidden = true
-        saveGCD.isEnabled = false
-        
         saveOperation.isHidden = true
         saveOperation.isEnabled = false
         
@@ -252,9 +243,6 @@ class ProfileViewController: UIViewController {
         inputInfo.borderStyle = UITextField.BorderStyle.none
         
         activityIndicator.isHidden = true
-        
-        saveGCD.layer.cornerRadius = 10
-        saveGCD.layer.borderWidth = 1.0
         
         saveOperation.layer.cornerRadius = 10
         saveOperation.layer.borderWidth = 1.0

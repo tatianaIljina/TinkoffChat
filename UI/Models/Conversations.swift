@@ -8,13 +8,16 @@
 
 import Foundation
 class Conversation: ConversationCellConfiguration{
+    
+    var userId: String?
     var name: String?
     var message: String?
     var date: Date?
     var online: Bool
     var hasUnreadMessage: Bool
     
-    init(name: String?, message: String?, date: Date?, online: Bool, hasUnreadMessage: Bool) {
+    init(userId: String?, name: String?, message: String?, date: Date?, online: Bool, hasUnreadMessage: Bool) {
+        self.userId = userId
         self.name = name
         self.message = message
         self.date = date

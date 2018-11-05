@@ -9,6 +9,6 @@
 import Foundation
 
 protocol DataManager {
-    func saveProfile(name: String, info: String, hasError: @ escaping (_ hasError: Bool) -> () )
+    func saveProfile(name: String, info: String, photo: String, hasError: @ escaping (_ hasError: Bool) -> () )
     //func loadFromFile (profile: [String : String]?)
 }

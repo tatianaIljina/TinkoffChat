@@ -235,29 +235,16 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMu-N3-JHZ">
-                                <rect key="frame" x="16" y="493" width="124" height="55"/>
+                                <rect key="frame" x="16" y="493" width="288" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="2p7-o3-UeU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Operation">
+                                <state key="normal" title="Сохранить">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="saveChangesButton:" destination="tfE-hV-8bO" eventType="touchUpInside" id="Rlw-5B-OO7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lp8-oj-tnV">
-                                <rect key="frame" x="180" y="493" width="124" height="55"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Z64-xa-tbI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="GCD">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="saveGCD:" destination="tfE-hV-8bO" eventType="touchUpInside" id="LiU-jN-VxQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Daq-1v-WSj">
@@ -334,7 +321,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="RcD-MO-3He" firstAttribute="leading" secondItem="8mJ-5e-4sk" secondAttribute="leading" constant="16" id="2mj-ye-gQ7"/>
-                            <constraint firstItem="eMu-N3-JHZ" firstAttribute="width" secondItem="Lp8-oj-tnV" secondAttribute="width" id="2tM-Bp-ren"/>
                             <constraint firstItem="8mJ-5e-4sk" firstAttribute="bottom" secondItem="Wf0-TG-Uoj" secondAttribute="bottom" constant="20" id="8w1-t7-ysy"/>
                             <constraint firstItem="RcD-MO-3He" firstAttribute="top" secondItem="ncl-eY-kmc" secondAttribute="bottom" constant="5" id="AL1-Uu-Su2"/>
                             <constraint firstItem="8mJ-5e-4sk" firstAttribute="trailing" secondItem="RcD-MO-3He" secondAttribute="trailing" constant="16" id="CzX-V9-uEX"/>
@@ -345,21 +331,18 @@
                             <constraint firstItem="8mJ-5e-4sk" firstAttribute="trailing" secondItem="Daq-1v-WSj" secondAttribute="trailing" constant="16" id="NqH-m7-awC"/>
                             <constraint firstItem="zyv-SP-OGh" firstAttribute="top" secondItem="8mJ-5e-4sk" secondAttribute="top" constant="16" id="OWJ-s2-Xdf"/>
                             <constraint firstItem="ncl-eY-kmc" firstAttribute="leading" secondItem="8mJ-5e-4sk" secondAttribute="leading" constant="16" id="PGR-Mt-4Hd"/>
-                            <constraint firstItem="Lp8-oj-tnV" firstAttribute="leading" secondItem="eMu-N3-JHZ" secondAttribute="trailing" constant="40" id="Rsc-BN-5yB"/>
-                            <constraint firstItem="8mJ-5e-4sk" firstAttribute="trailing" secondItem="Lp8-oj-tnV" secondAttribute="trailing" constant="16" id="SBC-UE-KT1"/>
                             <constraint firstItem="Y57-TK-8Lb" firstAttribute="leading" secondItem="8mJ-5e-4sk" secondAttribute="leading" constant="16" id="SuM-dC-2kq"/>
-                            <constraint firstItem="8mJ-5e-4sk" firstAttribute="bottom" secondItem="Lp8-oj-tnV" secondAttribute="bottom" constant="20" id="ZFV-jr-k1f"/>
                             <constraint firstItem="7N5-Ku-xCn" firstAttribute="centerX" secondItem="8mJ-5e-4sk" secondAttribute="centerX" id="bRS-XX-BDA"/>
                             <constraint firstItem="Daq-1v-WSj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7N5-Ku-xCn" secondAttribute="trailing" constant="8" symbolic="YES" id="bs3-4b-76Y"/>
                             <constraint firstItem="Wf0-TG-Uoj" firstAttribute="leading" secondItem="8mJ-5e-4sk" secondAttribute="leading" constant="16" id="dVl-Bi-zlZ"/>
                             <constraint firstItem="8mJ-5e-4sk" firstAttribute="trailing" secondItem="dYC-v5-BbG" secondAttribute="trailing" constant="16" id="fAT-He-xwz"/>
                             <constraint firstItem="7N5-Ku-xCn" firstAttribute="centerY" secondItem="8mJ-5e-4sk" secondAttribute="centerY" id="feK-TR-svv"/>
-                            <constraint firstItem="eMu-N3-JHZ" firstAttribute="height" secondItem="Lp8-oj-tnV" secondAttribute="height" id="j3H-sr-ofA"/>
                             <constraint firstItem="eMu-N3-JHZ" firstAttribute="leading" secondItem="8mJ-5e-4sk" secondAttribute="leading" constant="16" id="kza-NO-ioT"/>
                             <constraint firstItem="zyv-SP-OGh" firstAttribute="leading" secondItem="8mJ-5e-4sk" secondAttribute="leading" constant="16" id="lHl-vf-VaM"/>
                             <constraint firstItem="ncl-eY-kmc" firstAttribute="top" secondItem="Y57-TK-8Lb" secondAttribute="bottom" constant="10" id="mPw-ao-bAw"/>
                             <constraint firstAttribute="trailing" secondItem="Wf0-TG-Uoj" secondAttribute="trailing" constant="16" id="ngh-cm-id4"/>
                             <constraint firstItem="8mJ-5e-4sk" firstAttribute="trailing" secondItem="zyv-SP-OGh" secondAttribute="trailing" constant="16" id="oW2-mn-bp5"/>
+                            <constraint firstItem="8mJ-5e-4sk" firstAttribute="trailing" secondItem="eMu-N3-JHZ" secondAttribute="trailing" constant="16" id="ssa-PS-uqd"/>
                             <constraint firstItem="8mJ-5e-4sk" firstAttribute="trailing" secondItem="Y57-TK-8Lb" secondAttribute="trailing" constant="16" id="wch-Bu-Lqx"/>
                             <constraint firstItem="dYC-v5-BbG" firstAttribute="top" secondItem="Daq-1v-WSj" secondAttribute="bottom" constant="10" id="wfS-5Z-gez"/>
                             <constraint firstItem="8mJ-5e-4sk" firstAttribute="bottom" secondItem="eMu-N3-JHZ" secondAttribute="bottom" constant="20" id="yIz-N4-DmO"/>
@@ -373,10 +356,10 @@
                                 <rect key="frame" x="16" y="7" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Отмена"/>
+                                <connections>
+                                    <action selector="goBack1:" destination="tfE-hV-8bO" eventType="touchUpInside" id="po6-1d-xx9"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <action selector="goBack:" destination="tfE-hV-8bO" id="Pu5-le-mPV"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -388,7 +371,6 @@
                         <outlet property="loadPhoto" destination="Daq-1v-WSj" id="fhV-sk-XhZ"/>
                         <outlet property="nameLabel" destination="dYC-v5-BbG" id="j9i-Rj-BXr"/>
                         <outlet property="profileImage" destination="zyv-SP-OGh" id="XGg-gL-Bi9"/>
-                        <outlet property="saveGCD" destination="Lp8-oj-tnV" id="ayO-Z4-BO1"/>
                         <outlet property="saveOperation" destination="eMu-N3-JHZ" id="eGu-2U-WOt"/>
                     </connections>
                 </viewController>
